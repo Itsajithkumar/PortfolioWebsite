@@ -698,9 +698,13 @@ header .navbar ul li a:hover {
   padding-left: 1rem;
   background: #da0416;
   color: #FFF;
+    white-space: normal;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 .work .box-container .box .content .tag h3 {
-  font-size: 2rem;
+   font-size: 1.8rem;
+  word-wrap: break-word;
 }
 .work .box-container .box:hover .content {
   top: 25%;

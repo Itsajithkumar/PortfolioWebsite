@@ -84,55 +84,6 @@ var typed = new Typed(".typing-text", {
     showCursor: true,      // Cursor blinking
     cursorChar: "|",       // Customize cursor (optional)
 });
-/*
-// <!-- typed js effect starts -->
-var typed = new Typed(".typing-text", {
-    strings: [
-        "🎮 Crafting Immersive Worlds",
-        "🚀 Building the Future of XR",
-        "🕹️ Unity & Unreal Wizard",
-        "🌌 Creating Next-Gen Gameplay",
-        "👓 AR / VR Experience Architect",
-    ],
-    loop: true,
-    typeSpeed: 70,
-    backSpeed: 30,
-    backDelay: 500,
-    //smartBackspace: true,
-});
-*/
-// <!-- typed js effect ends -->
-
-// async function fetchData(type = "skills") {
-//     let response
-//     type === "skills" ?
-//         response = await fetch("/assets/js/skills.json")
-//         :
-//         response = await fetch("/assets/js/projects.json")
-//     const data = await response.json();
-//     return data;
-// }
-
-
-// async function fetchData(type = "skills") {
-//     let response;
-//     try {
-//         response = await fetch(
-//             type === "skills"
-//                 ? "./assets/js/skills.json"
-//                 : "./assets/js/projects.json"
-//         );
-
-//         if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-//         const text = await response.text();
-//         if (!text.trim()) throw new Error("Empty JSON file");
-//         return JSON.parse(text);
-//     } catch (err) {
-//         console.error("JSON Fetch Error:", err);
-//         return [];
-//     }
-// }
 
 async function fetchData(type = "skills") {
     let response
