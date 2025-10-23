@@ -291,7 +291,7 @@ const projects = {
       Optimized performance for standalone VR headsets.
     `
   },
-  "Motor Assembly Training Application": {
+  "Motor Assembly Training": {
     title: "Motor Assembly Training Application – Flowserve",
     platform: "Platform: Windows PC",
     tech: "Technologies: Unity (HDRP), C#, Input System",
@@ -348,7 +348,7 @@ const projects = {
       Enabled users to explore hospital services interactively with multi-language support.
     `
   },
-  "360° Interactive Learning Experience": {
+  "360° Interactive Experience": {
     title: "360° Interactive Learning Experience – Kreedo",
     platform: "Platform: Android (Mobile & Google Cardboard VR)",
     tech: "Technologies: Unity, C#, 360° Panorama, Hotspot Interaction System",
@@ -369,7 +369,7 @@ const projects = {
   "Conversational AI": {
     title: "Conversational AI – NOVAC GT",
     platform: "Platform: Windows",
-    tech: "Technologies: Unity, C#, REST API",
+    tech: "Technologies: Unity, C#, REST API,Mobile UI Toolkit, QR Code Scanning SDK,face verification",
     desc: `
       Conversational AI Chat: Developed a conversational AI character capable of real-time natural language responses, enabling seamless interactions with users. Integrated with advanced APIs for efficient and context-aware dialogue processing.
 
@@ -383,7 +383,31 @@ const projects = {
 
       Mobile Number OTP Authentication: Implemented an OTP (One-Time Password) authentication system to verify user identity via mobile number, enhancing security and ensuring a smooth user login experience.
     `
-  }
+  },
+  "3D Model Customization": {
+  title: "Interactive 3D Model Customization – VIVA ACP",
+  platform: "Android (Mobile)",
+  tech: "Unity, C#, TriLib, URP, Mobile UI Toolkit",
+  desc: `
+    Developed a real-time 3D model customization system allowing users to import FBX models at runtime on mobile devices.<br><br>
+    Implemented interior and exterior material editing with dynamic wall color and texture swapping using a pre-built high-quality template.<br><br>
+    Integrated login and template selection panels, enabling personalized project access and model management.<br><br>
+    Added intuitive touch-based controls for movement, rotation, and zoom, with a fixed player camera and one-tap reset functionality.<br><br>
+    Optimized performance for smooth interaction and rendering on Android devices.
+  `
+},
+"Military MARCHE Assessment": {
+  title: "Military TCC Simulation – POC",
+  platform: "PCVR (Unity 6)",
+  tech: "Unity 6, C#, Shader Graph, VFX Graph, Particle System, XR Interaction Toolkit,UI Toolkit",
+  desc: `
+    Designed and developed a high-quality Tactical Combat Casualty (TCC) simulation experience for VR training environments.<br><br>
+    Implemented advanced shaders and realistic VFX to simulate dynamic effects such as blood impact, water flow, and surface interaction.<br><br>
+    Integrated rigidbody-based physics.<br><br>Built an assessment scenario where the player treats injured teammates — identifying wounds, applying medical belts, and performing field-level care.<br><br>
+    Focused on visual fidelity, immersive interaction, and realistic environmental feedback optimized for PCVR platforms.
+  `
+},
+
 };
 
 // === OPEN MODAL ON EYE CLICK ===
