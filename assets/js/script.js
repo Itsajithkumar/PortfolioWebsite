@@ -133,11 +133,8 @@ function showProjects(projects) {
     });
     projectsContainer.innerHTML = projectHTML;
 
-    // <!-- tilt js effect starts -->
-    VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 15,
-    });
-    // <!-- tilt js effect ends -->
+    // Tilt effect intentionally disabled per user request.
+    // VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
 
     /* ===== SCROLL REVEAL ANIMATION ===== */
     const srtop = ScrollReveal({
@@ -247,7 +244,9 @@ srtop.reveal('.education .box', { interval: 200 });
 
 /* SCROLL PROJECTS */
 srtop.reveal('.work .box', { interval: 200 });
-
+/* SCROLL Certificate */
+srtop.reveal('.Certificate .box', { interval: 200 });
+srtop.reveal('.certifications .box', { interval: 200 });
 /* SCROLL EXPERIENCE */
 srtop.reveal('.experience .timeline', { delay: 400 });
 srtop.reveal('.experience .timeline .container', { interval: 400 });
@@ -259,152 +258,315 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
 
 // === PROJECT DATA ===
 const projects = {
-  "VR Escape Room": {
-    title: "VR Escape Room – IDFC",
-    platform: "Platform: Android (Oculus Quest)",
-    tech: "Technologies: Unity, C#, XR Interaction Toolkit, REST API",
-    desc: `
-      Developed a standalone VR escape room experience to train IDFC Bank employees in critical thinking and teamwork.<br><br>
-      Built interactive gameplay using Unity’s XR Interaction Toolkit, supporting object manipulation and dynamic quiz-solving in VR.<br><br>
-      Implemented a data tracking system to capture user performance metrics (Total time, retries, each question answer right/wrong, each room time, employee ID).<br><br>
-      Integrated REST APIs to send recorded user data to a remote server for analysis.<br><br>
-      Enabled real-time data visualization through a web-based admin dashboard for training insights.
-    `
-  },
+ "VR Escape Room": {
+  title: "VR Escape Room – IDFC Bank Training Simulation",
+  platform: "Android (Meta Oculus Quest – Standalone VR)",
+  tech: "Unity, C#, XR Interaction Toolkit, REST API, JSON, Web Dashboard",
+  desc: `
+    Designed and developed a fully standalone VR Escape Room training simulation for IDFC Bank, aimed at enhancing employees’ critical thinking, decision-making, and collaborative problem-solving skills in an immersive virtual environment.<br><br>
+
+    Created multi-room escape scenarios featuring interactive puzzles, logic-based challenges, and time-bound quizzes that require users to explore, analyze clues, and coordinate actions to progress through each level.<br><br>
+
+    Implemented realistic VR interactions using Unity’s XR Interaction Toolkit, including object grabbing, placement, inspection, and trigger-based events, ensuring intuitive and natural hand-based interaction within the VR space.<br><br>
+
+    Built a comprehensive performance tracking system that records detailed user analytics such as total session time, number of retries, per-question correct and incorrect responses, time spent in each room, and unique employee identification data.<br><br>
+
+    Integrated secure REST API communication to transmit recorded user performance data in JSON format to a remote backend server for centralized storage, reporting, and analysis.<br><br>
+
+    Enabled real-time visualization of training data through a web-based admin dashboard, allowing trainers and administrators to monitor user progress, identify learning gaps, and measure training effectiveness across multiple participants.<br><br>
+
+    Optimized the application for Oculus Quest standalone performance, focusing on smooth frame rates, efficient memory usage, and reliable XR interaction responsiveness to ensure a seamless and immersive training experience.
+  `
+},
+
   "Rocket Launch & Space Experience": {
-    title: "Rocket Launch & Space Experience – Thinkmate",
-    platform: "Platform: Android (Oculus Quest)",
-    tech: "Technologies: Unity, C#, XR Interaction Toolkit",
-    desc: `
-      Developed an immersive VR experience simulating a rocket launch, satellite deployment, and orbital view of Earth.<br><br>
-      Designed user interactions with XR Interaction Toolkit and animated rocket sequences.<br><br>
-      Built a virtual space station environment with interactive modules and optimized it for Oculus Quest.
-    `
-  },
-  "Dental Instrument Preparation": {
-    title: "Dental Instrument Preparation VR – EasyDent",
-    platform: "Platform: Android (Oculus Quest)",
-    tech: "Technologies: Unity, C#, XR Interaction Toolkit",
-    desc: `
-      Created a VR training simulation for dental staff to learn instrument cleaning and preparation workflows.<br><br>
-      Implemented interactive, step-by-step guidance with visual and audio prompts.<br><br>
-      Optimized performance for standalone VR headsets.
-    `
-  },
+  title: "Rocket Launch & Space Experience – Thinkmate",
+  platform: "Android (Meta Oculus Quest – Standalone VR)",
+  tech: "Unity, C#, XR Interaction Toolkit, Animation System, Android VR Optimization",
+  desc: `
+    Designed and developed an immersive standalone VR space exploration experience that simulates a complete rocket launch sequence, satellite deployment, and orbital views of Earth for educational and experiential learning purposes.<br><br>
+
+    Implemented a step-by-step rocket launch flow, including countdown initiation, stage separation, engine ignition, and orbital insertion, providing users with a realistic sense of scale, motion, and spaceflight progression.<br><br>
+
+    Built interactive VR controls using Unity’s XR Interaction Toolkit, allowing users to engage with cockpit elements, spacecraft controls, and satellite modules through natural hand-based interactions.<br><br>
+
+    Created high-quality animated sequences for rocket stages, satellite release mechanisms, and solar panel unfolding, enhancing realism and visual storytelling within the VR environment.<br><br>
+
+    Developed a fully explorable virtual space station environment featuring interactive modules, floating movement, and a dynamic Earth orbital view, reinforcing immersion and spatial awareness in zero-gravity conditions.<br><br>
+
+    Optimized the entire experience for Android-based Oculus Quest headsets by reducing draw calls, optimizing textures and lighting, and maintaining stable frame rates to ensure smooth performance in standalone VR.
+  `
+},
+
+ "Dental Instrument Preparation": {
+  title: "Dental Instrument Preparation VR – EasyDent",
+  platform: "Android (Meta Oculus Quest – Standalone VR)",
+  tech: "Unity, C#, XR Interaction Toolkit, Audio Guidance, Medical Training Simulation",
+  desc: `
+    Designed and developed a standalone VR training simulation for dental professionals to learn and practice the correct cleaning, sterilization, and preparation of dental instruments in a safe and repeatable virtual environment.<br><br>
+
+    Implemented structured, task-based workflows using Unity’s XR Interaction Toolkit, enabling users to pick up, clean, inspect, and place dental tools in the correct procedural sequence through natural hand interactions.<br><br>
+
+    Developed step-by-step procedural guidance using visual indicators, highlights, and synchronized audio instructions to closely simulate real-world dental sterilization and preparation standards.<br><br>
+
+    Focused on intuitive and user-friendly interaction design to ensure accessibility for first-time VR users in clinical and medical training environments, minimizing learning curve and reducing interaction errors.<br><br>
+
+    Optimized the application for Android-based Oculus Quest headsets by reducing asset complexity, optimizing lighting and textures, and maintaining stable performance for smooth, uninterrupted training sessions.
+  `
+},
+
   "Motor Assembly Training": {
-    title: "Motor Assembly Training Application – Flowserve",
-    platform: "Platform: Windows PC",
-    tech: "Technologies: Unity (HDRP), C#, Input System",
-    desc: `
-      Developed a photorealistic motor assembly training app using Unity HDRP.<br><br>
-      Supported multi-input controls (keyboard, touchscreen, joystick, gamepad).<br><br>
-      Designed interactive assembly steps with visual guidance and snap-to-fit logic.
-    `
-  },
+  title: "Motor Assembly Training Application – Flowserve",
+  platform: "Windows PC (Large Display & Touch Panel Support)",
+  tech: "Unity (HDRP), C#, New Input System, Touch & Gamepad Integration",
+  desc: `
+    Designed and developed a large-scale, photorealistic motor assembly training application for Flowserve using Unity’s High Definition Render Pipeline (HDRP), delivering high visual fidelity suitable for industrial and enterprise training environments.<br><br>
+
+    Created highly detailed 3D motor components and realistic industrial environments to accurately simulate the complete motor assembly workflow, allowing users to understand part orientation, sequencing, and assembly logic in a virtual setting.<br><br>
+
+    Implemented a unified multi-input control system using Unity’s New Input System, supporting keyboard & mouse, touchscreen interfaces (TV panels), virtual joystick, and gamepad input within a single application build.<br><br>
+
+    Designed interactive, step-by-step assembly procedures with clear visual guidance, part highlighting, and snap-to-fit validation to ensure correct placement and reduce user errors during training.<br><br>
+
+    Developed a custom non-EXE-based installer for simplified deployment, enabling plug-and-play installation on client PCs without complex setup or hardware dependencies.<br><br>
+
+    Optimized application performance for large-format PC displays, touch interaction, and varied hardware configurations, ensuring smooth operation and reliable responsiveness in real-world industrial training setups.
+  `
+},
+
   "3D Data Visualization": {
-    title: "3D Data Visualization in VR – Internal Product",
-    platform: "Platform: Android (Oculus Quest)",
-    tech: "Technologies: Unity, C#, OVR SDK, REST API",
-    desc: `
-      Developed a VR-based tool that renders Excel data as 3D charts.<br><br>
-      Integrated backend APIs for real-time visualization.<br><br>
-      Enabled immersive exploration of datasets inside VR.
-    `
-  },
-  "Shopping Mall Experience": {
-    title: "Shopping Mall Experience – Shriram (Super App Simulation)",
-    platform: "Platform: PC & PCVR (OpenXR)",
-    tech: "Technologies: Unreal Engine, C++, Blueprints, OpenXR, Generative AI",
-    desc: `
-      Developed a photorealistic, multi-functional virtual shopping mall application combining immersive retail, entertainment, and AI-driven service experiences.<br><br>
-      Integrated a generative AI-based virtual receptionist bot that interacts with users through real-time voice commands.<br><br>
-      Included Cinema Area, Food Court, and Finance Zone for complete simulation.
-    `
-  },
+  title: "3D Data Visualization in VR – Internal Product",
+  platform: "Android (Meta Oculus Quest – Standalone VR)",
+  tech: "Unity, C#, OVR SDK, REST API, Runtime Data Rendering",
+  desc: `
+    Designed and developed a standalone VR-based 3D data visualization product that dynamically converts uploaded Excel data into interactive 3D charts within an immersive virtual environment.<br><br>
+
+    Integrated backend REST APIs to fetch structured data from a remote server in real time, enabling live updates and seamless synchronization between the data source and VR visualization layer.<br><br>
+
+    Implemented runtime-generated 3D visual elements, including dynamic bar charts and data-driven objects whose scale, position, and layout adapt automatically based on dataset structure and values.<br><br>
+
+    Enabled intuitive VR-based exploration of complex datasets through natural controller interactions, allowing users to navigate, inspect, and interpret data spatially for improved analytical insight.<br><br>
+
+    Leveraged the OVR SDK to deliver a smooth, optimized standalone VR experience on Oculus Quest, focusing on performance stability, low latency interaction, and user-friendly visualization workflows.
+  `
+},
+
+ "Shopping Mall Experience": {
+  title: "Shopping Mall Experience – Shriram Super App Simulation",
+  platform: "PC & PCVR (OpenXR)",
+  tech: "Unreal Engine, C++, Blueprints, OpenXR, Generative AI, Voice Interaction",
+  desc: `
+    Designed and delivered a photorealistic, multi-functional virtual shopping mall as an internal showcase for Shriram’s One Super App vision, blending retail, entertainment, AI-powered services, and brand engagement into one immersive application.<br><br>
+
+    Built for both desktop PC and PCVR platforms using OpenXR, ensuring cross-platform capability and a unified codebase that runs on any OpenXR‑compatible system. This approach supports broad hardware access and future‑proofing of the experience. :contentReference[oaicite:0]{index=0}<br><br>
+
+    Integrated a generative AI–driven virtual receptionist bot that responds to real‑time voice commands, guiding users on navigation, promotions, and mall information. This adds a conversational, service‑oriented layer to conventional VR/PC experiences, showcasing advanced user assistance and brand interaction.<br><br>
+
+    Developed a rich Game Zone with multiple mini‑games, including:  
+    • Obstacle Challenge featuring dynamic traps and movement‑based interaction  
+    • Maze Runner with timed navigation challenges  
+    These elements increase engagement, retention, and replay value, simulating entertainment spaces within a commercial environment.<br><br>
+
+    Implemented AI‑driven NPCs with pathfinding and crowd simulation to mimic realistic mall behavior—walking customers, security staff, and shop attendants—creating believable, populated scenes rather than empty corridors. This enhances immersion and mirrors real‑world foot traffic patterns.<br><br>
+
+    Created modular storefront areas that retail brands can customize, including digital product shelving and display interfaces, enabling a flexible platform for sponsorship, advertising, or virtual commerce.<br><br>
+
+    Added diverse functional zones—Cinema, Food Court, Event Zone, and a Finance Zone modeling Shriram’s financial services such as insurance, loans, and EMI options. Users can browse products, watch branded content, or book appointments, demonstrating a full ecosystem under a single virtual roof.<br><br>
+
+    Achieved high‑fidelity visuals using Unreal Engine’s advanced lighting and geometry systems. Leveraged Lumen for dynamic real‑time global illumination and reflections, integrated with Nanite for handling dense geometry and highly detailed environments—delivering photorealistic interiors, reflective glass, and complex architectural detail without compromising rendering quality. :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2}<br><br>
+
+    Supported multiple input modes—VR controllers, keyboard & mouse, and gamepad—so users can access the app on varied hardware configurations, lowering friction for both desktop and VR users.<br><br>
+
+    Optimized for high‑performance rendering and smooth navigation in both desktop and VR contexts, ensuring stable frame rates and responsive controls even in complex, populated scenes. This makes the experience practical for demos, presentations, and long sessions on modern PCs and VR headsets.
+  `
+},
+
   "Cinematic Open-World Experience": {
-    title: "Cinematic Open-World War Experience – Albaqee",
-    platform: "Platform: PC, PCVR, 360 Video",
-    tech: "Technologies: Unreal Engine (Blueprints), Niagara VFX, Chaos Destruction, OpenXR",
-    desc: `
-      Created a cinematic open-world war experience featuring destructible environments, AI-driven combat, and real-time explosions using Unreal’s Chaos and Niagara systems.<br><br>
-      Optimized for both PC and VR playback, with cinematic sequences exported in 360° format.
-    `
-  },
-  "Immune System VR Experience": {
-    title: "Immune System VR Experience – Roche CIT",
-    platform: "Platform: Android (Oculus Quest)",
-    tech: "Technologies: Unity, C#, XR Interaction Toolkit",
-    desc: `
-      Developed an educational VR experience visualizing the human immune system in 3D.<br><br>
-      Combined interactive elements with medical-grade animations to explain biological processes.
-    `
-  },
+  title: "Cinematic Open-World War Experience – Albaqee",
+  platform: "PC, PCVR (OpenXR), 360° Cinematic Video",
+  tech: "Unreal Engine (Blueprints), Niagara VFX, Chaos Destruction, AI Systems, OpenXR",
+  desc: `
+    Designed and developed a cinematic, open-world war experience inspired by a true-story conflict between rival gangs, built entirely using Unreal Engine’s Blueprint-only architecture to deliver large-scale environments, intense combat, and narrative-driven gameplay.<br><br>
+
+    Created a detailed, war-torn open world featuring urban ruins, cemeteries, and destructible structures. Leveraged Unreal Engine’s Chaos Destruction System to enable real-time building damage, collapses, and environmental reactions, enhancing realism and player immersion.<br><br>
+
+    Implemented high-impact cinematic moments such as bomb explosions, shockwaves, debris simulations, and large-scale environmental effects using Niagara VFX, delivering visually intense and emotionally charged war sequences.<br><br>
+
+    Developed violent combat scenarios involving AI-driven enemy behavior, gang-based movement, coordinated attacks, and close-combat animations. Balanced realism and performance while pushing visual and interaction boundaries in a controlled, cinematic context.<br><br>
+
+    Designed and managed dynamic NPC systems to simulate realistic gang presence, patrols, confrontations, and conflict escalation across large outdoor environments including city streets and graveyard locations.<br><br>
+
+    Optimized massive destructible scenes for both PC gameplay and PCVR builds using occlusion culling, LOD management, event-based spawning, and controlled physics activation to maintain smooth frame rates even during heavy action sequences.<br><br>
+
+    Crafted cinematic camera movements, scripted sequences, and dramatic framing to support storytelling. Produced high-quality cinematic renders and trailers, including 360-degree video exports for immersive viewing and promotional showcases.<br><br>
+
+    Delivered the project in three formats: an interactive PC experience, a PCVR build using OpenXR for immersive storytelling, and a polished 360° cinematic video output for narrative presentation and marketing use.
+  `
+},
+
+ "Immune System VR Experience": {
+  title: "Immune System VR Experience – Roche CIT",
+  platform: "Android (Meta Oculus Quest – Standalone VR)",
+  tech: "Unity, C#, XR Interaction Toolkit, Video Player, Medical Visualization",
+  desc: `
+    Designed and developed an educational standalone VR experience for Roche CIT to visualize and explain the functioning of the human immune system at a microscopic level in an immersive and intuitive way.<br><br>
+
+    Created a guided virtual journey inside the human body, allowing users to explore immune responses in real time by navigating through organs, bloodstreams, and cellular environments using Unity and the XR Interaction Toolkit.<br><br>
+
+    Integrated high-resolution 360° medical animation videos that automatically play at key moments within the experience, helping explain complex biological processes such as immune response activation, cell interaction, and pathogen defense in a clear and engaging manner.<br><br>
+
+    Designed interactive VR elements that allow users to trigger animations, move between different body regions, and closely observe immune cell behavior, blending hands-on exploration with cinematic medical visualization.<br><br>
+
+    Implemented precise control over Unity’s Video Player and timeline systems to ensure smooth, seamless transitions between interactive 3D environments and cinematic 360° educational content without breaking immersion.<br><br>
+
+    Optimized the application for Android-based Oculus Quest headsets, ensuring stable performance, smooth video playback, and efficient memory usage while rendering high-quality 3D content and medical animations simultaneously.<br><br>
+
+    Delivered a polished standalone VR experience used by Roche’s medical and internal teams for training, awareness programs, and scientific presentations, enabling complex immunology concepts to be communicated effectively through immersive technology.
+  `
+},
+
   "Hospital Awareness VR Experience": {
-    title: "Hospital Awareness VR Experience – Kauvery Hospital",
-    platform: "Platform: Android (Oculus Quest)",
-    tech: "Technologies: Unity, C#, XR Interaction Toolkit",
-    desc: `
-      Created a VR-based hospital awareness experience integrating 360° and real-time recorded videos.<br><br>
-      Enabled users to explore hospital services interactively with multi-language support.
-    `
-  },
+  title: "Hospital Awareness VR Experience – Kauvery Hospital",
+  platform: "Android (Meta Oculus Quest – Standalone VR)",
+  tech: "Unity, C#, XR Interaction Toolkit, Video Player, Multi-Language UI",
+  desc: `
+    Designed and developed a standalone VR-based hospital awareness experience for Kauvery Hospital, aimed at educating patients, visitors, and the general public through immersive and easily accessible virtual content.<br><br>
+
+    Integrated a combination of high-quality 360° videos and real-time recorded 2D videos within a unified VR environment, allowing users to virtually explore hospital facilities, departments, and services in an engaging and informative manner.<br><br>
+
+    Implemented intuitive VR user interactions using Unity’s XR Interaction Toolkit, enabling users to start, pause, replay, and switch between different informational videos seamlessly while remaining immersed in the experience.<br><br>
+
+    Developed a multi-language selection system presented at the beginning of the experience, allowing users to choose from multiple regional and international languages, ensuring accessibility for a diverse patient and visitor audience.<br><br>
+
+    Focused on user-friendly navigation and interaction design optimized for first-time VR users in healthcare settings, supporting both gaze-based input and controller-based interaction to reduce learning curve and interaction friction.<br><br>
+
+    Optimized video playback and interaction performance for Oculus Quest by efficiently managing video resolution, streaming, memory usage, and asset loading using Unity’s built-in video systems, ensuring smooth and reliable playback in a standalone environment.<br><br>
+
+    Delivered a polished standalone VR application deployed in hospital premises as part of public outreach initiatives, awareness campaigns, and in-clinic VR kiosk installations, enhancing patient engagement and understanding through immersive media.
+  `
+},
+
   "360° Interactive Experience": {
-    title: "360° Interactive Learning Experience – Kreedo",
-    platform: "Platform: Android (Mobile & Google Cardboard VR)",
-    tech: "Technologies: Unity, C#, 360° Panorama, Hotspot Interaction System",
-    desc: `
-      Built a 360° panoramic VR experience for interactive learning in schools.<br><br>
-      Implemented hotspot navigation, gaze controls, and lightweight performance optimization.
-    `
-  },
+  title: "360° Interactive Learning Experience – Kreedo",
+  platform: "Android (Mobile & Google Cardboard VR)",
+  tech: "Unity, C#, 360° Panorama, Hotspot Interaction System, Gaze Input",
+  desc: `
+    Designed and developed a lightweight 360° interactive learning experience for Kreedo, targeted at schools and educational centers, enabling immersive storytelling and concept-based learning using standard Android devices and Google Cardboard VR.<br><br>
+
+    Built a panoramic VR environment using 360° imagery, allowing students to explore scenes in all directions and engage with educational content in an intuitive and visually engaging format without requiring high-end hardware.<br><br>
+
+    Implemented a custom hotspot interaction system using Unity and C#, enabling users to navigate between scenes, trigger animations, and access contextual informational content directly within the 360° environment.<br><br>
+
+    Designed a modular and data-driven framework to dynamically load scenes, assets, and hotspot configurations, allowing content updates and expansion without rebuilding the entire application—ideal for scalable educational content delivery.<br><br>
+
+    Integrated gaze-based and tap-based interaction controls to ensure ease of use for younger learners and classroom environments where external controllers are not available, reducing complexity and improving accessibility.<br><br>
+
+    Optimized the application for low-end Android devices by minimizing memory usage, optimizing texture resolution, and streamlining interaction logic, while maintaining a smooth and comfortable VR experience in Google Cardboard mode.<br><br>
+
+    Delivered a compact, installer-ready APK suitable for mass distribution across schools, supporting both standard mobile usage and immersive Cardboard VR, and enabling cost-effective deployment of interactive learning experiences.
+  `
+},
+
   "Mixed Reality Data Visualization": {
-    title: "Mixed Reality Data Visualization POC – Internal Project",
-    platform: "Platform: Windows (HoloLens – Mixed Reality)",
-    tech: "Technologies: Unity, C#, MRTK, OpenXR",
-    desc: `
-      Developed a mixed reality data visualization POC using HoloLens and MRTK.<br><br>
-      Created holographic graphs anchored in real-world environments using voice and hand gestures.
-    `
-  },
+  title: "Mixed Reality Data Visualization POC – Internal Project",
+  platform: "Windows (Microsoft HoloLens – Mixed Reality)",
+  tech: "Unity, C#, MRTK (Mixed Reality Toolkit), OpenXR, Spatial Mapping",
+  desc: `
+    Designed and developed a proof-of-concept Mixed Reality (MR) application for HoloLens to visualize structured enterprise data directly within a real-world environment, demonstrating how spatial computing can enhance data understanding and decision-making.<br><br>
+
+    Created interactive 3D data visualization elements including holographic graphs, charts, and contextual information panels that are spatially anchored to physical surroundings, enabling users to view and analyze data at true scale within their workspace.<br><br>
+
+    Leveraged MRTK’s interaction systems to implement natural user input, including hand tracking, gaze-based targeting, and voice commands, allowing seamless control over data visibility, selection, and navigation without traditional input devices.<br><br>
+
+    Implemented dynamic runtime data loading logic, enabling datasets to be updated and refreshed within the Mixed Reality environment without rebuilding the application, supporting flexible enterprise data workflows.<br><br>
+
+    Utilized spatial mapping and world anchoring to ensure holographic UI elements align naturally with real-world surfaces, maintaining positional stability and immersion as users move around their environment.<br><br>
+
+    Optimized the experience for HoloLens hardware constraints, focusing on performance, interaction responsiveness, and comfortable long-duration usage in real-world enterprise scenarios.<br><br>
+
+    Delivered the final solution as a Windows-based HoloLens application, serving as an internal POC to showcase the potential of Mixed Reality for enterprise data visualization, analytics, and spatial decision support.
+  `
+},
+
   "Conversational AI": {
-    title: "Conversational AI – NOVAC GT",
-    platform: "Platform: Windows",
-    tech: "Technologies: Unity, C#, REST API,Mobile UI Toolkit, QR Code Scanning SDK,face verification",
-    desc: `
-      Conversational AI Chat: Developed a conversational AI character capable of real-time natural language responses, enabling seamless interactions with users. Integrated with advanced APIs for efficient and context-aware dialogue processing.
+  title: "Conversational AI Platform – NOVAC GT",
+  platform: "Windows",
+  tech: "Unity, C#, REST API, Mobile UI Toolkit, QR Code Scanning SDK, Face Verification, OTP Authentication",
+  desc: `
+    Designed and developed an enterprise-grade Conversational AI application for NOVAC GT, featuring a real-time AI-powered virtual character capable of engaging users through natural, context-aware dialogue for interactive customer and information services.<br><br>
 
-      Camera Face Verification: Implemented face verification using the device’s camera, ensuring secure user identification through facial recognition technology.
+    Implemented a conversational AI system integrated with backend REST APIs to process user queries, generate intelligent responses, and maintain conversational context, enabling smooth and realistic human–AI interaction in real time.<br><br>
 
-      QR Scanning Feature: Integrated a QR code scanning functionality to enable easy data retrieval and secure access through visual scanning.
+    Integrated camera-based face verification to securely identify users through facial recognition, adding an additional biometric security layer suitable for enterprise and public-facing deployments.<br><br>
 
-      Display 1 - IAORA Hologram Avatar: Designed and displayed a highly interactive IAORA hologram avatar for immersive, lifelike conversations, providing a cutting-edge user experience.
+    Developed a QR code scanning feature that allows users to quickly retrieve data, authenticate sessions, or access services through visual scanning, improving usability and reducing manual input requirements.<br><br>
 
-      Display 2 - Touchscreen UI: Developed a user-friendly touchscreen UI that complements the AI conversation, allowing users to engage with intuitive controls and interact with the system seamlessly.
+    Created a high-fidelity IAORA hologram avatar display, delivering an immersive and lifelike conversational experience that visually represents the AI assistant and enhances user engagement in kiosk-style or presentation environments.<br><br>
 
-      Mobile Number OTP Authentication: Implemented an OTP (One-Time Password) authentication system to verify user identity via mobile number, enhancing security and ensuring a smooth user login experience.
-    `
-  },
-  "3D Model Customization": {
+    Designed and implemented a complementary touchscreen-based user interface using Mobile UI Toolkit, enabling users to interact with the system through intuitive controls alongside voice-based AI interaction.<br><br>
+
+    Implemented a secure mobile number OTP (One-Time Password) authentication flow to verify user identity, ensuring controlled access and compliance with enterprise security requirements.<br><br>
+
+    Delivered a fully integrated Windows-based conversational AI solution combining voice interaction, visual avatars, biometric verification, and multi-channel input, suitable for deployment in enterprise kiosks, customer service counters, and interactive digital experiences.
+  `
+},
+
+ "3D Model Customization": {
   title: "Interactive 3D Model Customization – VIVA ACP",
   platform: "Android (Mobile)",
-  tech: "Unity, C#, TriLib, URP, Mobile UI Toolkit",
+  tech: "Unity, C#, TriLib, URP, Mobile UI Toolkit, Runtime Asset Import",
   desc: `
-    Developed a real-time 3D model customization system allowing users to import FBX models at runtime on mobile devices.<br><br>
-    Implemented interior and exterior material editing with dynamic wall color and texture swapping using a pre-built high-quality template.<br><br>
-    Integrated login and template selection panels, enabling personalized project access and model management.<br><br>
-    Added intuitive touch-based controls for movement, rotation, and zoom, with a fixed player camera and one-tap reset functionality.<br><br>
-    Optimized performance for smooth interaction and rendering on Android devices.
+    Designed and developed a real-time 3D model customization application for VIVA ACP, enabling users to import and visualize FBX models dynamically at runtime on Android mobile devices without requiring pre-bundled assets.<br><br>
+
+    Implemented a flexible interior and exterior material customization system, allowing users to change wall colors, textures, and surface finishes instantly using a high-quality pre-defined material template designed for architectural and product visualization.<br><br>
+
+    Integrated secure login and template selection panels, enabling personalized access to saved projects, model configurations, and reusable design presets for efficient project management and user continuity.<br><br>
+
+    Developed intuitive touch-based interaction controls, including smooth movement, rotation, and zoom gestures, paired with a fixed camera setup and one-tap reset functionality to ensure ease of use for non-technical users.<br><br>
+
+    Leveraged Unity URP and optimized rendering pipelines to maintain smooth performance and visual clarity on mobile hardware, focusing on efficient lighting, texture handling, and draw-call optimization.<br><br>
+
+    Delivered a lightweight, responsive mobile application suitable for real-world use cases such as architectural visualization, product customization, client presentations, and on-site design previews on Android devices.
   `
 },
 "Military MARCHE Assessment": {
   title: "Military TCC Simulation – POC",
   platform: "PCVR (Unity 6)",
-  tech: "Unity 6, C#, Shader Graph, VFX Graph, Particle System, XR Interaction Toolkit,UI Toolkit",
+  tech: "Unity 6, C#, Shader Graph, VFX Graph, Particle System, XR Interaction Toolkit, UI Toolkit",
   desc: `
-    Designed and developed a high-quality Tactical Combat Casualty (TCC) simulation experience for VR training environments.<br><br>
-    Implemented advanced shaders and realistic VFX to simulate dynamic effects such as blood impact, water flow, and surface interaction.<br><br>
-    Integrated rigidbody-based physics.<br><br>Built an assessment scenario where the player treats injured teammates — identifying wounds, applying medical belts, and performing field-level care.<br><br>
-    Focused on visual fidelity, immersive interaction, and realistic environmental feedback optimized for PCVR platforms.
+    Designed and developed an advanced Tactical Combat Casualty Care (TCC) simulation built around the MARCHE protocol, enabling military trainees to practice life-saving procedures in a highly realistic PCVR training environment.<br><br>
+
+    Constructed a visually rich battlefield scenario with environmental cues such as smoke, debris, blood trails, and material-based surface reactions. Leveraged Shader Graph, VFX Graph, and custom particle systems to simulate complex dynamic effects including blood flow, impact splatter, surface wetness, and wound progression, significantly enhancing immersion and emotional engagement.<br><br>
+
+    Developed robust physics-driven interaction systems using rigidbody mechanics to ensure precise handling of medical tools — including tourniquets, chest seals, bandages, pressure applicators, and airway devices. Each tool responds naturally to user movement, weight, and force application, reinforcing authentic combat medical training.<br><br>
+
+    Implemented a guided yet assessment-focused MARCHE training flow:
+    <ul>
+      <li><b>M – Massive Hemorrhage:</b> Identify life-threatening bleeding and apply immediate interventions.</li>
+    </ul><br>
+    Built a full assessment system where trainees are evaluated on accuracy, decision-making order, tool usage correctness, response time, and adherence to MARCHE procedures. The simulation provides dynamic feedback—successful actions stabilize the casualty while mistakes escalate injury severity—creating a realistic pressure-driven training atmosphere.<br><br>
+    Prioritized high visual fidelity, natural interaction, and optimized PCVR performance to deliver a smooth, responsive, and deeply immersive training tool suitable for military medical drills, scenario rehearsals, and professional combat medic education.
+  `
+},
+"Hyundai Safety Training": {
+  title: "Hyundai Plant – Electrical & Tool Handling Safety Training (Standalone VR)",
+  platform: "Oculus Standalone (Unity 6)",
+  tech: "Unity 6, C#, Shader Graph, VFX Graph, Particle System, XR Interaction Toolkit, UI Toolkit",
+  desc: `
+    Designed and developed a high-quality safety training simulation for Hyundai's manufacturing environment, focused on electrical safety, tool handling, and operator awareness.<br><br>
+    Built an interactive VR workflow where workers learn the correct procedure for operating Hyundai-specific tools, identifying unsafe conditions, and following proper lockout–tagout steps.<br><br>
+    Implemented realistic electrical system behavior including live wire indication, spark feedback, short-circuit reactions, and hazard visualization using Shader Graph and VFX Graph.<br><br>
+    Created intuitive hand interactions using XR Interaction Toolkit, enabling trainees to pick up tools, operate machinery, perform inspections, and follow guided safety steps with high accuracy.<br><br>
+    Integrated a structured LTA (Learn–Try–Assess) training methodology: 
+    <ul>
+      <li><b>Learn Mode:</b> Trainees are guided step-by-step through each safety procedure with visual cues, narration, and tool highlights.</li>
+      <li><b>Try Mode:</b> Users attempt each task independently with reduced assistance, reinforcing real-world decision-making.</li>
+      <li><b>Assess Mode:</b> The simulation evaluates user actions, timing, tool usage correctness, and adherence to safety rules.</li>
+    </ul>
+    <br>
+    Implemented a performance tracking and reporting system that logs user interactions, completion times, and procedural accuracy into structured Excel-based output. This data is provided to instructors for reviewing trainee performance and identifying mistakes or missed steps, enabling targeted safety improvement.<br><br>
+    Developed a complete standalone Oculus experience optimized for performance, ensuring stable frame rates, high visual fidelity, and smooth VR ergonomics for long training sessions.<br><br>
+    Delivered a production-ready training module used within Hyundai’s plant workflow to improve worker safety, reduce operational errors, and standardize tool usage procedures across teams.
   `
 },
 
@@ -414,9 +576,31 @@ const projects = {
 document.querySelectorAll(".btns .fa-eye").forEach(btn => {
   btn.addEventListener("click", e => {
     e.preventDefault();
-    const projectName = e.target.closest('.content').querySelector('h3').textContent.trim();
+
     const modal = document.getElementById("projectModal");
-    
+
+    // Prefer reading modal content from the closest .box data-* attributes (works for both projects and certifications)
+    const box = e.target.closest('.box');
+    if (box && (box.dataset.title || box.dataset.desc)) {
+      const title = box.dataset.title || (box.querySelector('.tag h3') ? box.querySelector('.tag h3').textContent.trim() : 'Item');
+      const platform = box.dataset.platform || '';
+      const tech = box.dataset.tech || '';
+      const desc = box.dataset.desc || (box.querySelector('.desc p') ? box.querySelector('.desc p').innerHTML : '');
+
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalPlatform").textContent = platform;
+      document.getElementById("modalTech").textContent = tech;
+      document.getElementById("modalDesc").innerHTML = desc;
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden";
+      return;
+    }
+
+    // Fallback: try to find a project entry by name (legacy behavior)
+    const projectNameEl = e.target.closest('.content') && e.target.closest('.content').querySelector('h3');
+    if (!projectNameEl) return;
+    const projectName = projectNameEl.textContent.trim();
+
     const data = Object.entries(projects).find(([key]) => projectName.includes(key));
     if (data) {
       const proj = data[1];
@@ -442,4 +626,49 @@ window.onclick = event => {
     document.body.style.overflow = "auto";
   }
 };
+
+// Certification view is handled by the general .btns .fa-eye listener which now supports certificates via data attributes.
+
+// Tilt effect intentionally disabled per user request.
+// To re-enable, uncomment the line below.
+// if (typeof VanillaTilt !== 'undefined') { VanillaTilt.init(document.querySelectorAll('.tilt'), { max: 15 }); }
+
+// Certification Link buttons: open the certificate URL in a new tab (do not trigger modal)
+document.querySelectorAll('.certifications a.btn').forEach(a => {
+  a.addEventListener('click', e => {
+    // prevent other click handlers (smooth-scroll)
+    e.stopImmediatePropagation();
+    e.preventDefault();
+
+    const box = a.closest('.box');
+    const url = a.dataset.url || (box && box.dataset.url) || a.getAttribute('href');
+    if (url && url !== '#' && url !== '') {
+      window.open(url, '_blank', 'noopener');
+      return;
+    }
+    // Fallback: open certificate image
+    if (box) {
+      const img = box.querySelector('img');
+      if (img && img.src) window.open(img.src, '_blank', 'noopener');
+    }
+  });
+});
+
+// Forward project View button clicks to the eye-icon handler so View opens the modal like certifications.
+document.querySelectorAll('#work a.btn').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const eye = a.querySelector('.fa-eye');
+    if (eye) {
+      eye.click();
+      return;
+    }
+    // If icon not present inside the anchor, try to find the .fa-eye inside the same .box
+    const box = a.closest('.box');
+    if (box) {
+      const eyeInBox = box.querySelector('.fa-eye');
+      if (eyeInBox) eyeInBox.click();
+    }
+  });
+});
 
