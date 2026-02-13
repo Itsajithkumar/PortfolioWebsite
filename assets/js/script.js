@@ -529,6 +529,7 @@ const projects = {
     Delivered a lightweight, responsive mobile application suitable for real-world use cases such as architectural visualization, product customization, client presentations, and on-site design previews on Android devices.
   `
 },
+
 "Military MARCHE Assessment": {
   title: "Military TCC Simulation – POC",
   platform: "PCVR (Unity 6)",
@@ -567,6 +568,52 @@ const projects = {
     Implemented a performance tracking and reporting system that logs user interactions, completion times, and procedural accuracy into structured Excel-based output. This data is provided to instructors for reviewing trainee performance and identifying mistakes or missed steps, enabling targeted safety improvement.<br><br>
     Developed a complete standalone Oculus experience optimized for performance, ensuring stable frame rates, high visual fidelity, and smooth VR ergonomics for long training sessions.<br><br>
     Delivered a production-ready training module used within Hyundai’s plant workflow to improve worker safety, reduce operational errors, and standardize tool usage procedures across teams.
+  `
+},
+
+"Fintech Platform": {
+  title: "Fintech Platform – Payments & Risk Dashboard",
+  platform: "Web & WebGL",
+  tech: "Unity WebGL, JavaScript, REST API, Data Visualization",
+  desc: `
+    Built an interactive fintech demo showcasing payment flow visualizations and risk dashboards with real-time data mapping. Includes secure REST integrations and dashboard visualizations for executive reporting.
+  `
+},
+
+"GHB Portal": {
+  title: "GHB Portal – Enterprise Dashboard",
+  platform: "Web",
+  tech: "React, Node.js, REST API, Unity WebGL Integration",
+  desc: `
+    Enterprise portal combining administrative dashboards with embedded WebGL experiences for immersive product previews and training modules.
+  `
+},
+
+"MyCoach App": {
+  title: "MyCoach – Personal Training Companion",
+  platform: "Android & Web",
+  tech: "Unity, C#, Firebase, Mobile UI",
+  desc: `
+    A cross-platform coaching app with interactive workout scenes, analytics tracking, and personalized training plans delivered via a lightweight Unity client.
+  `
+},
+
+
+"Indian Embassy VR Tour": {
+  title: "Indian Embassy VR Tour – Cultural Experience",
+  platform: "PCVR & WebVR",
+  tech: "Unity, C#, 360° Video, Timeline",
+  desc: `
+    A guided VR tour of an embassy space featuring historical exhibits, 360° videos, and interactive hotspots for cultural education and outreach.
+  `
+},
+
+"WowHR Recruitment Tool": {
+  title: "WowHR – Recruitment & Assessment Tool",
+  platform: "Web",
+  tech: "React, Node.js, REST API, Unity Assessment Modules",
+  desc: `
+    Recruitment platform integrating skill assessments delivered as lightweight WebGL modules paired with candidate dashboards and reporting.
   `
 },
 
