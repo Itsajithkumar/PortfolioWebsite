@@ -693,7 +693,47 @@ const projects = {
     Optimized avatar rendering, animation blending, and holographic transparency effects to ensure smooth visual output within cylindrical projection constraints.
   `
 },
+"IAORA Hologram Display": {
+  title: "Siraj Finance – IAORA Dual Display Hologram AI System",
+  platform: "Windows (Hologram Display + Secondary Interaction Display)",
+  tech: "Unity, C#, MediaPipe (Face Recognition), WebSocket, REST API, STT, Multi-Display Rendering System",
+  desc: `
+    Architected and delivered a next-generation IAORA holographic AI assistant system for Siraj Finance, featuring a Dual Display Interaction Architecture combining a hologram projection unit with a secondary interaction display panel.<br><br>
 
+    <b>Dual Display Interaction System:</b><br>
+    Implemented a synchronized dual-output rendering system where:
+    <ul>
+      <li>The primary hologram display projects a 3D AI avatar using transparent illusion-based rendering.</li>
+      <li>The secondary display (touchscreen / LED panel) shows UI prompts, subtitles, user instructions, and interaction controls.</li>
+    </ul>
+    Both displays operate in real-time sync using Unity’s multi-display support, ensuring consistent conversational state and interaction flow across screens.<br><br>
+
+    Integrated real-time face recognition using Unity MediaPipe plugin to detect and identify users standing in front of the camera. Once a valid face is detected, the system automatically triggers the greeting workflow on both displays simultaneously.<br><br>
+
+    Developed an intelligent greeting sequence where the hologram avatar initiates a personalized welcome animation and audio greeting. After greeting completion, the system transitions smoothly into full conversational mode.<br><br>
+
+    Built a robust AI conversational pipeline powered by:
+    <ul>
+      <li><b>REST API:</b> For AI response generation, business logic handling, and data retrieval.</li>
+      <li><b>WebSocket:</b> For low-latency bidirectional communication and real-time speech streaming.</li>
+    </ul><br>
+
+    Implemented complete voice interaction flow:
+    <ul>
+      <li><b>Speech-to-Text (STT):</b> Captures and converts user speech into text using streaming WebSocket communication.</li>
+    </ul><br>
+
+    Designed synchronized subtitle rendering on the secondary display to mirror AI responses spoken by the hologram, enhancing accessibility and clarity in noisy public environments.<br><br>
+
+    Developed hotkey-triggered interaction overrides allowing operators to manually initiate greetings, switch demo modes, or trigger predefined financial service responses during presentations and events.<br><br>
+
+    Implemented conversation interruption logic enabling users to skip or stop the avatar while speaking. This immediately halts playback, resets dialogue state, and allows new speech input — ensuring responsive and natural human-AI engagement.<br><br>
+
+    Optimized hologram rendering for projection constraints including depth illusion calibration, alpha transparency tuning, avatar positioning alignment, and animation blending to maintain smooth 360° holographic visibility.<br><br>
+
+    Delivered a production-ready enterprise AI hologram solution combining immersive 3D projection with interactive dual-screen UI, enhancing customer engagement, automating front-desk interaction, and modernizing financial branch experience through spatial AI technology.
+  `
+},
 
 };
 
