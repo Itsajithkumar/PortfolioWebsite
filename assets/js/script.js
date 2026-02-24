@@ -570,52 +570,130 @@ const projects = {
     Delivered a production-ready training module used within Hyundai’s plant workflow to improve worker safety, reduce operational errors, and standardize tool usage procedures across teams.
   `
 },
-
-"Fintech Platform": {
-  title: "Fintech Platform – Payments & Risk Dashboard",
-  platform: "Web & WebGL",
-  tech: "Unity WebGL, JavaScript, REST API, Data Visualization",
+// AWRLiyod
+"AI Reception System": {
+  title: "AWR Lloyd – AI-Powered Interactive Reception System",
+  platform: "Windows Kiosk & Enterprise Display",
+  tech: "Unity, C#, WebSocket, REST API, Face Tracking SDK, STT, TTS, Keyboard Input System",
   desc: `
-    Built an interactive fintech demo showcasing payment flow visualizations and risk dashboards with real-time data mapping. Includes secure REST integrations and dashboard visualizations for executive reporting.
+    Designed and developed an AI-driven enterprise reception system for AWR Lloyd, combining face tracking, conversational AI, and real-time backend integration for intelligent visitor interaction.<br><br>
+
+    Implemented an interactive Welcome Panel that dynamically activates when a user approaches the kiosk, creating a seamless and engaging first interaction experience.<br><br>
+
+    Integrated real-time face tracking using camera input to detect user presence and trigger personalized workflows. The system communicates with backend services using WebSocket connections for instant event-based interaction handling.<br><br>
+
+    Built a dual communication AI system:
+    <ul>
+      <li><b>Speech-to-Text (STT):</b> Converts user voice input into text via WebSocket streaming.</li>
+      <li><b>Text-to-Speech (TTS):</b> Generates natural AI responses for real-time audio playback.</li>
+    </ul><br>
+
+    Developed conversational AI powered by REST APIs for response generation and WebSocket streaming for low-latency communication.<br><br>
+
+    Added keyboard hotkey overrides for manual control during demos, admin interactions, and emergency flow management.<br><br>
+
+    Optimized for enterprise kiosk deployment with stable session handling, smooth avatar animation transitions, and secure API communication.
+  `
+},
+"Kiosk & LED System": {
+  title: "Indian Embassy – Interactive Kiosk & LED AI Display System",
+  platform: "Windows Kiosk + LED Display System",
+  tech: "Unity, C#, QR Code SDK, REST API, WebSocket, TTS, Video Player",
+  desc: `
+    Delivered a dual-application system for the Indian Embassy consisting of an interactive Kiosk system and a synchronized LED display platform.<br><br>
+
+    <b>Application 1 – Smart Kiosk:</b><br>
+    Developed a dual-avatar system (Male & Female AI hosts) allowing dynamic character selection based on user preference or configuration.<br><br>
+
+    Integrated QR code scanning with backend verification via REST API. Upon successful verification, the system triggers personalized greeting workflows.<br><br>
+
+    Built a conditional greeting engine that plays gender-based welcome messages and animations depending on verified visitor profile data.<br><br>
+
+    <b>Application 2 – LED Display System:</b><br>
+    Implemented automated welcome greeting video playback for display on large LED panels.<br><br>
+
+    Integrated hotkey-based control triggers to manually override or initiate specific greeting flows during events or official visits.<br><br>
+
+    Developed conversational TTS functionality powered by REST APIs, enabling live interaction display synchronized with avatar animation.<br><br>
+
+    Ensured both systems communicate seamlessly for event-based triggers and synchronized greeting presentation.
   `
 },
 
-"GHB Portal": {
-  title: "GHB Portal – Enterprise Dashboard",
-  platform: "Web",
-  tech: "React, Node.js, REST API, Unity WebGL Integration",
+"VIP AI Kiosk System": {
+  title: "MyCoach – AI-Based VIP Recognition & Conversational Kiosk",
+  platform: "Windows Kiosk",
+  tech: "Unity, C#, Face Tracking SDK, REST API, WebSocket, Video Playback Engine",
   desc: `
-    Enterprise portal combining administrative dashboards with embedded WebGL experiences for immersive product previews and training modules.
+    Designed an intelligent AI-powered kiosk solution for MyCoach featuring VIP recognition, automated greeting playback, and conversational AI.<br><br>
+
+    Integrated real-time face tracking to detect user presence and identify VIP profiles via backend verification APIs.<br><br>
+
+    Developed a dual-trigger system:
+    <ul>
+      <li><b>Face Recognition Based:</b> Automatically detects VIPs and plays personalized welcome videos.</li>
+      <li><b>Hotkey Trigger:</b> Manual override option to initiate greeting workflows during controlled events.</li>
+    </ul><br>
+
+    Built AI conversational capabilities powered by REST APIs for response generation and WebSocket streaming for real-time communication.<br><br>
+
+    Optimized session handling to smoothly transition between greeting videos and live AI chat conversation without UI interruptions.
   `
 },
 
-"MyCoach App": {
-  title: "MyCoach – Personal Training Companion",
-  platform: "Android & Web",
-  tech: "Unity, C#, Firebase, Mobile UI",
+"Recruitment AI Kiosk": {
+  title: "WowHR – AI Recruitment & Assessment Kiosk",
+  platform: "Windows Enterprise Kiosk",
+  tech: "Unity, C#, WebSocket, REST API, TTS, Animated Avatar System",
   desc: `
-    A cross-platform coaching app with interactive workout scenes, analytics tracking, and personalized training plans delivered via a lightweight Unity client.
+    Developed an AI-powered recruitment kiosk system for WowHR designed to engage candidates through conversational interaction and automated assessment workflows.<br><br>
+
+    Implemented idle animation states for avatar presence when no user interaction is detected, ensuring a lifelike and engaging kiosk environment.<br><br>
+
+    Built AI conversational engine using:
+    <ul>
+      <li><b>WebSocket:</b> For real-time voice streaming and interaction events.</li>
+      <li><b>REST API:</b> For intelligent response generation and backend candidate data retrieval.</li>
+    </ul><br
+    Integrated hotkey-based detail triggers to simulate candidate-specific responses during demonstrations or HR-controlled sessions.<br><br>
   `
 },
 
-
-"Indian Embassy VR Tour": {
-  title: "Indian Embassy VR Tour – Cultural Experience",
-  platform: "PCVR & WebVR",
-  tech: "Unity, C#, 360° Video, Timeline",
+"AI Financial Assistant": {
+  title: "Bharat Fintech – AI Financial Interactive Assistant",
+  platform: "Enterprise Kiosk / Display System",
+  tech: "Unity, C#, WebSocket, REST API, TTS, Video Playback",
   desc: `
-    A guided VR tour of an embassy space featuring historical exhibits, 360° videos, and interactive hotspots for cultural education and outreach.
+    Designed and deployed an AI-powered financial assistance kiosk system for Bharat Fintech, providing intelligent conversational interaction for visitors and customers.<br><br>
+
+    Implemented idle state promotional video playback when no interaction is detected, ensuring continuous brand engagement.<br><br>
+
+    Developed AI conversational system integrating WebSocket streaming for real-time voice communication and REST APIs for secure financial data retrieval and response handling.<br><br>
+
+    Built smooth transition logic between idle promotional mode and active conversational AI mode upon user interaction detection.<br><br>
+
+    Focused on secure API communication, stable connection handling, and responsive UI for financial industry deployment standards.
+  `
+},
+"Cylindrical Hologram AI Display": {
+  title: "GoodHumanBeingIndex – Cylindrical Hologram AI Conversational Display",
+  platform: "Cylindrical Hologram Display System (Windows)",
+  tech: "Unity, C#, WebSocket, REST API, TTS, Avatar Animation System",
+  desc: `
+    Engineered an advanced AI-powered hologram display system for GHBI using a cylindrical holographic projection setup.<br><br>
+
+    Designed an idle holographic avatar animation state that maintains presence and engagement when no active interaction occurs.<br><br>
+
+    Implemented AI conversational system integrating REST APIs for response generation and WebSocket streaming for real-time voice interaction.<br><br>
+
+    Developed hotkey-triggered event flows to simulate or manually activate predefined conversational scenarios.<br><br>
+
+    Built conversation interruption logic allowing users to skip or stop the avatar while speaking, immediately halting TTS playback and resetting the dialogue state.<br><br>
+
+    Optimized avatar rendering, animation blending, and holographic transparency effects to ensure smooth visual output within cylindrical projection constraints.
   `
 },
 
-"WowHR Recruitment Tool": {
-  title: "WowHR – Recruitment & Assessment Tool",
-  platform: "Web",
-  tech: "React, Node.js, REST API, Unity Assessment Modules",
-  desc: `
-    Recruitment platform integrating skill assessments delivered as lightweight WebGL modules paired with candidate dashboards and reporting.
-  `
-},
 
 };
 
