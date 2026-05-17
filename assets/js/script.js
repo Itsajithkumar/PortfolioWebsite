@@ -734,18 +734,169 @@ const projects = {
     Delivered a production-ready enterprise AI hologram solution combining immersive 3D projection with interactive dual-screen UI, enhancing customer engagement, automating front-desk interaction, and modernizing financial branch experience through spatial AI technology.
   `
 },
+"Image Verse": {
+  title: "ImgVerse – AI Image & Document Utility SaaS Platform",
+  platform: "Web Platform (Browser-Based AI Utility Suite)",
+  tech: "HTML5, CSS3, JavaScript, Tesseract.js OCR, QR Generator, PDF Utilities, Web APIs, Responsive UI/UX, SEO Optimization, Google AdSense Integration",
+  desc: `
+    Architected and developed ImgVerse, a modern browser-based AI utility SaaS platform providing a unified suite of image, document, OCR, and QR-based tools with a strong focus on privacy, accessibility, and high-performance client-side processing.<br><br>
 
+    <b>All-in-One Utility SaaS Architecture:</b><br>
+    Designed a scalable multi-tool web application integrating:
+    <ul>
+      <li>Image-to-Text OCR conversion</li>
+      <li>PDF-to-Image utilities</li>
+      <li>Image-to-PDF conversion</li>
+      <li>QR Code generation</li>
+      <li>Clipboard image paste support</li>
+      <li>Document utility workflows</li>
+    </ul>
+    The platform was built as a lightweight, browser-first SaaS solution requiring no installation, account registration, or server-side processing.<br><br>
+    Implemented a responsive and modern UI/UX system optimized for desktop, tablet, and mobile devices using advanced CSS layouts, gradient-based visual design, adaptive grid systems, and accessibility-friendly interaction patterns.<br><br>
+    Developed a privacy-focused client-side processing pipeline where uploaded images and documents are processed entirely within the browser environment, ensuring files never leave the user’s device and improving user trust and security compliance.<br><br>
+    Integrated real-time OCR functionality using Tesseract.js to extract editable text from uploaded images and scanned documents. The OCR engine supports:
+    <ul>
+      <li>Screenshot text extraction</li>
+      <li>Scanned document digitization</li>
+      <li>Clipboard image OCR processing</li>
+      <li>Multi-format image support</li>
+    </ul><br>
+
+    Designed a drag-and-drop file upload system with:
+    <ul>
+      <li>Instant preview rendering</li>
+      <li>Clipboard paste integration</li>
+      <li>Dynamic processing state updates</li>
+      <li>Client-side file validation</li>
+    </ul>
+    enabling smooth and intuitive user interaction.<br><br>
+    Implemented QR Code generation workflows allowing users to instantly generate downloadable QR codes from custom text and URLs using browser-based JavaScript libraries.<br><br>
+    Developed browser-native PDF and image conversion utilities enabling seamless file transformation workflows without requiring backend infrastructure, improving performance while reducing operational hosting costs.<br><br>
+    
+    Optimized application performance through:
+    <ul>
+      <li>Lazy loading strategies</li>
+      <li>CDN-based dependency delivery</li>
+      <li>Minimized client-side rendering overhead</li>
+      <li>Efficient DOM update handling</li>
+    </ul>
+    ensuring fast loading speeds and smooth interaction even on low-end devices.<br><br>
+
+    Implemented SEO optimization techniques including:
+    <ul>
+      <li>Meta title and description management</li>
+      <li>Structured Open Graph metadata</li>
+      <li>Schema.org structured data integration</li>
+      <li>Mobile-friendly responsive architecture</li>
+      <li>Search engine indexing optimization</li>
+    </ul>
+    to improve discoverability and ranking on Google and other search engines.<br><br>
+    Integrated Google AdSense monetization support with optimized advertisement placement strategies while maintaining clean UI balance and user experience quality.<br><br>
+    Designed the platform as a fully free utility ecosystem eliminating mandatory account creation, subscription barriers, or cloud upload dependency — maximizing accessibility for students, professionals, and public users.<br><br>
+    Delivered a production-ready AI utility SaaS platform combining OCR, document processing, QR workflows, and browser-native conversion utilities into a unified high-performance web experience optimized for scalability, discoverability, and real-world daily productivity usage.
+  `
+},
+"Traffic System Tracker": {
+  title: "Realtime AI Traffic Monitoring & Smart Vehicle Tracking System",
+  platform: "Windows Application + Unity Mobile Application (Realtime Synchronized Monitoring System)",
+  tech: "Unity, Python, YOLO11, OpenCV, ByteTrack, WebSocket, Computer Vision, Realtime Video Processing",
+  desc: `
+    Architected and developed a production-ready Realtime AI Traffic Monitoring System integrating Python-based AI inference with Unity-powered visualization interfaces for intelligent vehicle detection, tracking, and analytics.<br><br>
+
+    <b>Dual Application Realtime Monitoring Architecture:</b><br>
+    Designed a synchronized multi-platform monitoring ecosystem consisting of:
+    <ul>
+      <li>A Python-based Windows AI processing application responsible for realtime vehicle detection, tracking, and counting.</li>
+      <li>A Unity-based mobile application used for realtime visualization, synchronized traffic analytics display, and live monitoring dashboards.</li>
+    </ul>
+    Both applications communicate continuously through low-latency WebSocket-based realtime data synchronization, ensuring consistent traffic analytics across devices.<br><br>
+
+    Implemented advanced AI-powered vehicle detection using YOLO11 and OpenCV capable of identifying:
+    <ul>
+      <li>Cars</li>
+      <li>Buses</li>
+      <li>Trucks</li>
+    </ul>
+    The system performs realtime object classification and multi-object tracking from live camera feeds and prerecorded traffic video streams.<br><br>
+
+    Developed intelligent vehicle tracking and counting logic using ByteTrack-based object persistence to maintain stable tracking IDs even during:
+    <ul>
+      <li>Fast-moving traffic</li>
+      <li>Partial occlusion</li>
+      <li>Crowded intersections</li>
+      <li>Temporary object disappearance</li>
+    </ul><br>
+
+    Engineered a smart line-crossing analytics system where vehicles are counted automatically once bounding regions intersect predefined virtual traffic lines, improving counting accuracy beyond traditional center-point collision systems.<br><br>
+
+    Built a realtime FPS-optimized processing pipeline featuring:
+    <ul>
+      <li>Dynamic frame optimization</li>
+      <li>Low-latency video processing</li>
+      <li>Adaptive detection confidence tuning</li>
+      <li>Efficient GPU/CPU execution support</li>
+    </ul>
+    enabling stable realtime traffic analytics performance on both webcam streams and prerecorded video feeds.<br><br>
+
+    Developed a responsive Unity-based mobile monitoring dashboard displaying:
+    <ul>
+      <li>Realtime vehicle counts</li>
+      <li>Live traffic analytics</li>
+      <li>Vehicle category statistics</li>
+      <li>Realtime synchronization status</li>
+      <li>Cross-platform monitoring visualization</li>
+    </ul><br>
+
+    Implemented WebSocket communication architecture for bidirectional realtime data transfer between the Python AI engine and Unity mobile application, ensuring sub-second synchronization of traffic metrics and analytics updates.<br><br>
+
+    Designed modular AI processing workflows supporting:
+    <ul>
+      <li>Live webcam traffic feeds</li>
+      <li>Recorded traffic surveillance videos</li>
+      <li>Multi-camera monitoring scalability</li>
+      <li>Future cloud deployment compatibility</li>
+    </ul><br>
+
+    Developed optimized bounding box rendering and visual overlay systems including:
+    <ul>
+      <li>Vehicle-specific color-coded tracking boxes</li>
+      <li>Realtime object IDs</li>
+      <li>Vehicle classification labels</li>
+      <li>Live FPS monitoring</li>
+      <li>Traffic counting overlays</li>
+    </ul>
+    ensuring high visual clarity during realtime monitoring scenarios.<br><br>
+
+    Engineered the application for future smart-city and intelligent transportation system (ITS) scalability, enabling seamless extension toward:
+    <ul>
+      <li>Traffic congestion analysis</li>
+      <li>Violation detection</li>
+      <li>Cloud analytics dashboards</li>
+      <li>AI-based traffic prediction systems</li>
+      <li>Multi-location centralized monitoring</li>
+    </ul><br>
+
+    Delivered a scalable enterprise-grade AI traffic analytics solution combining realtime computer vision, cross-platform synchronization, and intelligent vehicle tracking to modernize traffic monitoring and smart mobility infrastructure workflows.
+  `
+},
 };
 
 // === OPEN MODAL ON EYE CLICK ===
-document.querySelectorAll(".btns .fa-eye").forEach(btn => {
-  btn.addEventListener("click", e => {
-    e.preventDefault();
+document.querySelectorAll(".btns a.btn").forEach(anchor => {
+  if (!anchor.querySelector('.fa-eye')) return;
 
+  anchor.addEventListener("click", e => {
+    const href = (anchor.getAttribute('href') || '').trim();
+    if (href && href !== '#') {
+      // external link: allow normal navigation
+      return;
+    }
+
+    e.preventDefault();
     const modal = document.getElementById("projectModal");
 
     // Prefer reading modal content from the closest .box data-* attributes (works for both projects and certifications)
-    const box = e.target.closest('.box');
+    const box = anchor.closest('.box');
     if (box && (box.dataset.title || box.dataset.desc)) {
       const title = box.dataset.title || (box.querySelector('.tag h3') ? box.querySelector('.tag h3').textContent.trim() : 'Item');
       const platform = box.dataset.platform || '';
@@ -762,7 +913,7 @@ document.querySelectorAll(".btns .fa-eye").forEach(btn => {
     }
 
     // Fallback: try to find a project entry by name (legacy behavior)
-    const projectNameEl = e.target.closest('.content') && e.target.closest('.content').querySelector('h3');
+    const projectNameEl = anchor.closest('.content') && anchor.closest('.content').querySelector('h3');
     if (!projectNameEl) return;
     const projectName = projectNameEl.textContent.trim();
 
@@ -822,18 +973,15 @@ document.querySelectorAll('.certifications a.btn').forEach(a => {
 // Forward project View button clicks to the eye-icon handler so View opens the modal like certifications.
 document.querySelectorAll('#work a.btn').forEach(a => {
   a.addEventListener('click', e => {
-    e.preventDefault();
+    const href = (a.getAttribute('href') || '').trim();
     const eye = a.querySelector('.fa-eye');
-    if (eye) {
-      eye.click();
+    if (!eye || (href && href !== '#')) {
+      // Allow normal navigation for external links and non-view buttons.
       return;
     }
-    // If icon not present inside the anchor, try to find the .fa-eye inside the same .box
-    const box = a.closest('.box');
-    if (box) {
-      const eyeInBox = box.querySelector('.fa-eye');
-      if (eyeInBox) eyeInBox.click();
-    }
+
+    e.preventDefault();
+    eye.click();
   });
 });
 

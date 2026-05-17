@@ -86,6 +86,15 @@ section {
 .heading span {
   color: rgb(167, 3, 30);
 }
+.project-category {
+  font-size: 2rem;
+  color: rgb(32, 32, 32);
+  font-weight: 600;
+  text-align: left;
+  margin: 2rem 0 1rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid rgb(167, 3, 30);
+}
 header .logo {
   font-size: 1.9rem;
   font-weight: 800;
@@ -658,6 +667,37 @@ header .navbar ul li a:hover {
 }
 .work .heading span {
   color: rgb(194, 175, 7);
+}
+.work .qoute {
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  text-shadow: 0 0 10px rgba(194, 175, 7, 0.5);
+  opacity: 0.95;
+}
+.work .projects-wrapper .qoute {
+  font-size: 2.0rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem 0;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(194, 175, 7, 0.3);
+  opacity: 1;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+}
+.work .subheading {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(194, 175, 7, 0.5);
+}
+.work #companyProjects {
+  margin-bottom: 4rem;
 }
 .work .box-container {
   display: flex;
