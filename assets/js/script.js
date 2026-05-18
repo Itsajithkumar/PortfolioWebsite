@@ -222,6 +222,11 @@ srtop.reveal('.home .content .btn', { delay: 200 });
 srtop.reveal('.home .image', { delay: 400 });
 srtop.reveal('.home .linkedin', { interval: 600 });
 srtop.reveal('.home .github', { interval: 800 });
+// reveal other brand icons present in the markup
+srtop.reveal('.home .unity', { interval: 1000 });
+srtop.reveal('.home .microsoft', { interval: 1100 });
+srtop.reveal('.home .youtube', { interval: 1200 });
+// Legacy / alternative socials left for compatibility (no matching elements currently)
 srtop.reveal('.home .twitter', { interval: 1000 });
 srtop.reveal('.home .telegram', { interval: 600 });
 srtop.reveal('.home .instagram', { interval: 600 });

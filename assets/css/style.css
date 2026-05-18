@@ -296,6 +296,37 @@ header .navbar ul li a:hover {
   display: inline-block;
   margin-bottom: 14px;
 }
+.socials .social-icons li {
+  /* entrance animation: slide up and fade in */
+  opacity: 0;
+  transform: translateY(12px);
+  animation-name: socialDrop;
+  animation-duration: 480ms;
+  animation-timing-function: cubic-bezier(.2,.8,.2,1);
+  animation-fill-mode: forwards;
+}
+
+/* staggered delays so icons appear top->down uniformly */
+.socials .social-icons li:nth-child(1) { animation-delay: 0.05s; }
+.socials .social-icons li:nth-child(2) { animation-delay: 0.12s; }
+.socials .social-icons li:nth-child(3) { animation-delay: 0.19s; }
+.socials .social-icons li:nth-child(4) { animation-delay: 0.26s; }
+.socials .social-icons li:nth-child(5) { animation-delay: 0.33s; }
+.socials .social-icons li:nth-child(6) { animation-delay: 0.40s; }
+
+@keyframes socialDrop {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .socials .social-icons li,
+  .social-icons a {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
 .social-icons a {
   font-size: 2rem;
   display: inline-block;
@@ -316,24 +347,37 @@ header .navbar ul li a:hover {
 .social-icons a:hover {
   color: #fff;
   background-color: #0685da;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(4, 25, 80, 0.2);
 }
 .social-icons a.github:hover {
-  background-color: #0e0e0e;
+  background-color: #0685da;
+  /* background-color: #0e0e0e; */
+    transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(4, 25, 80, 0.2);
 }
 .social-icons a.twitter:hover {
   background-color: #00aced;
+    transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(4, 25, 80, 0.2);
 }
 .social-icons a.linkedin:hover {
   background-color: #0072b1;
+    transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(4, 25, 80, 0.2);
 }
 .social-icons a.dev:hover {
   background-color: #bb0000;
+    transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(4, 25, 80, 0.2);
 }
 .social-icons a.instagram:hover {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 .social-icons a.facebook:hover {
   background: #32506d;
+    transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(4, 25, 80, 0.2);
 }
 /* social icons end */
 
