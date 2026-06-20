@@ -884,6 +884,120 @@ const projects = {
     Delivered a scalable enterprise-grade AI traffic analytics solution combining realtime computer vision, cross-platform synchronization, and intelligent vehicle tracking to modernize traffic monitoring and smart mobility infrastructure workflows.
   `
 },
+"Automotive Cinematic Experience": {
+  title: "Automotive Product Cinematic – Unreal Engine 5.6",
+  platform: "Windows (Real-Time Cinematic Visualization)",
+  tech: "Unreal Engine 5.6, Lumen, Movie Render Queue, Sequencer, Nanite",
+  desc: `
+    Designed and produced a high-fidelity automotive product cinematic using Unreal Engine 5.6, showcasing advanced real-time rendering capabilities for vehicle marketing, branding, and promotional campaigns.<br><br>
+
+    Created photorealistic vehicle visuals with detailed materials, realistic reflections, and cinematic camera movements to highlight the design, engineering, and premium aesthetics of the automobile.<br><br>
+
+    Leveraged Unreal Engine's Lumen Global Illumination system to achieve dynamic lighting, accurate reflections, and realistic environmental interactions without requiring traditional light baking workflows.<br><br>
+
+    Utilized Nanite virtualized geometry technology to render highly detailed vehicle assets while maintaining real-time performance and visual quality throughout the cinematic production pipeline.<br><br>
+
+    Developed multiple cinematic camera sequences using Unreal Engine Sequencer, including tracking shots, close-up product highlights, and dynamic reveal animations to create a professional commercial-style presentation.<br><br>
+
+    Rendered final output using Movie Render Queue, enabling high-quality cinematic frame output with advanced anti-aliasing, motion blur, and production-grade rendering settings suitable for advertisements and promotional media.<br><br>
+
+    Optimized lighting, materials, post-processing effects, and scene composition to achieve a premium automotive visualization experience while maintaining efficient production workflows.<br><br>
+
+    Delivered a polished automotive branding cinematic demonstrating the potential of Unreal Engine 5.6 for commercials, product showcases, digital marketing campaigns, and real-time visualization projects.
+  `
+},
+"Real-Time Asset Automation":{
+title: "Maya to Unreal Engine Automation Pipeline",
+platform: "Autodesk Maya + Unreal Engine 5 (Python Automation Pipeline)",
+tech: "Python, Maya Python API (cmds), Unreal Engine Python API, FBX Pipeline, JSON Data Serialization, Material Automation, Scene Reconstruction, Asset Import Automation",
+desc: `
+Architected and developed AssetBridge, a fully automated Maya-to-Unreal Engine content pipeline designed to eliminate repetitive manual asset import workflows and streamline production-ready asset integration for real-time applications, digital twins, XR experiences, and game development pipelines.<br><br>
+
+
+<b>End-to-End DCC to Engine Automation:</b><br>
+Designed and implemented a complete automation framework enabling seamless transfer of assets from Autodesk Maya into Unreal Engine with a single-click workflow.
+<ul>
+  <li>Automated FBX Export Pipeline</li>
+  <li>Hierarchy Data Extraction</li>
+  <li>Material Data Serialization</li>
+  <li>Scene Reconstruction Automation</li>
+  <li>Material Creation & Assignment</li>
+  <li>Transform Preservation Workflow</li>
+</ul>
+eliminating manual setup tasks traditionally required during content migration processes.<br><br>
+
+Developed a custom Maya Python exporter capable of traversing complex scene hierarchies and automatically extracting:
+<ul>
+  <li>Parent-child relationships</li>
+  <li>Transform hierarchy structures</li>
+  <li>Mesh metadata</li>
+  <li>Material slot assignments</li>
+  <li>Scene organization information</li>
+</ul>
+while generating structured JSON datasets for downstream Unreal Engine processing.<br><br>
+
+Implemented intelligent scene-cleaning and naming standardization systems to automatically sanitize object names, remove invalid FBX characters, normalize naming conventions, and ensure cross-platform compatibility between Maya and Unreal Engine asset ecosystems.<br><br>
+
+Designed a custom JSON serialization architecture to preserve scene metadata during export, including:
+<ul>
+  <li>Unique object identifiers</li>
+  <li>Parent hierarchy mappings</li>
+  <li>Translation values</li>
+  <li>Rotation values</li>
+  <li>Scale values</li>
+  <li>Material slot information</li>
+</ul>
+enabling accurate scene reconstruction inside Unreal Engine.<br><br>
+
+Developed an Unreal Engine Python-based automated importer responsible for:
+<ul>
+  <li>FBX asset import</li>
+  <li>Automatic content folder creation</li>
+  <li>Static mesh generation</li>
+  <li>Material asset generation</li>
+  <li>Scene hierarchy rebuilding</li>
+  <li>Transform restoration</li>
+</ul>
+creating a complete digital replica of the original Maya scene structure within Unreal Engine.<br><br>
+
+Implemented procedural material creation workflows using Unreal Engine's Material Editing Library, automatically generating material assets and configuring:
+<ul>
+  <li>Base Color Parameters</li>
+  <li>Roughness Parameters</li>
+  <li>Metallic Parameters</li>
+  <li>Specular Parameters</li>
+</ul>
+directly from exported Maya material metadata without manual intervention.<br><br>
+
+Built automated hierarchy reconstruction systems capable of recreating complex multi-level scene structures using exported parent-child relationships, ensuring proper organization within the Unreal Engine World Outliner and preserving original scene logic.<br><br>
+
+Implemented transform restoration pipelines that automatically apply local translations, rotations, and scale values to imported actors, maintaining spatial accuracy between Maya and Unreal Engine environments.<br><br>
+
+Optimized asset import performance through:
+<ul>
+  <li>Automated batch processing</li>
+  <li>Metadata-driven reconstruction</li>
+  <li>Reusable import workflows</li>
+  <li>Content folder automation</li>
+  <li>Error logging and validation systems</li>
+</ul>
+significantly reducing artist and technical artist setup time while improving pipeline consistency and reliability.<br><br>
+
+Designed the framework as a scalable production pipeline suitable for:
+<ul>
+  <li>Game Development</li>
+  <li>Automotive Visualization</li>
+  <li>Digital Twin Applications</li>
+  <li>XR Training Simulations</li>
+  <li>Industrial Visualization</li>
+  <li>Enterprise Real-Time Rendering Workflows</li>
+</ul>
+supporting efficient transfer of large-scale content between DCC tools and real-time engines.<br><br>
+
+Delivered a production-ready automation solution that transforms traditionally manual Maya-to-Unreal asset migration processes into a streamlined one-click pipeline, significantly accelerating content production workflows while maintaining hierarchy integrity, material consistency, and scene accuracy.
+`
+},
+
 };
 
 // === OPEN MODAL ON EYE CLICK ===
